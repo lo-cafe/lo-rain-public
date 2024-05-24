@@ -1,4 +1,4 @@
-# lo-rain: A macOS Native Live Wallpaper and Desktop Effects App
+# lo-rain
 
 ## Introduction
 
