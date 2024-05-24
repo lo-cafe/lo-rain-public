@@ -1,5 +1,5 @@
 # lo-rain
-
+[![Build lo-rain](https://github.com/lo-cafe/lo-rain/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/lo-cafe/lo-rain/actions/workflows/build.yml)
 ## Introduction
 
 Welcome to **lo-rain**, a macOS native application that transforms your desktop with stunning live wallpapers and dynamic desktop effects. Enhance your workspace with beautiful, animated backgrounds and interactive features that bring your screen to life.
