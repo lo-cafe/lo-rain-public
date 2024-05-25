@@ -1,0 +1,41 @@
+name: Publish Sparkle Appcast
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Sparkle
+        uses: jozefizso/setup-sparkle@v1
+        with:
+          version: 2.6.2
+
+      - name: Download release asset
+        id: download
+        run: |
+          gh release download ${{ github.event.release.tag_name }} --repo ${{ github.repository }} --pattern '*.dmg' --dir ./
+          mv ./*.dmg lo-rain.dmg
+
+      - name: Generate appcast
+        run: |
+          generate_keys &
+          generate_appcast ./
+          sed -i "s|https://lo.cafe/lo-rain-files/lo-rain.dmg|https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/lo-rain.dmg|g" ./appcast.xml
+
+      - name: Upload appcast.xml to repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          cp ./appcast.xml $GITHUB_WORKSPACE/
+          git add appcast.xml
+          git commit -m "Update appcast.xml for release ${{ github.event.release.tag_name }}"
+          git push
