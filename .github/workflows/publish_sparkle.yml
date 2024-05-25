@@ -24,7 +24,6 @@ jobs:
           GH_TOKEN: "${{ secrets.RELEASE_REPO_SECRET }}"
         run: |
           gh release download ${{ github.event.release.tag_name }} --repo ${{ github.repository }} --pattern '*.dmg' --dir ./
-          mv ./*.dmg lo-rain.dmg
 
       - name: Generate appcast
         run: |
