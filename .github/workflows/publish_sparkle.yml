@@ -38,7 +38,7 @@ jobs:
           PRIVATE_SPARKLE_KEY: ${{ secrets.PRIVATE_SPARKLE_KEY }}
         run: |
           echo "$PRIVATE_SPARKLE_KEY" | generate_appcast --ed-key-file - ./
-          sed -i "s|https://lo.cafe/lo-rain-files/lo-rain.dmg|https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/lo-rain.dmg|g" ./appcast.xml
+          sed -i'' -e 's|https://lo.cafe/lo-rain-files/lo-rain.dmg|https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/lo-rain.dmg|g' appcast.xml
 
       - name: Upload appcast.xml to repository
         env:
