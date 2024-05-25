@@ -7,9 +7,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-14
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
+      - name: Configure Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.4'
+          
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -26,9 +34,10 @@ jobs:
           gh release download ${{ github.event.release.tag_name }} --repo ${{ github.repository }} --pattern '*.dmg' --dir ./
 
       - name: Generate appcast
+        env:
+          PRIVATE_SPARKLE_KEY: ${{ secrets.PRIVATE_SPARKLE_KEY }}
         run: |
-          generate_keys &
-          generate_appcast ./
+          echo "$PRIVATE_SPARKLE_KEY" | ./generate_appcast --ed-key-file -
           sed -i "s|https://lo.cafe/lo-rain-files/lo-rain.dmg|https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/lo-rain.dmg|g" ./appcast.xml
 
       - name: Upload appcast.xml to repository
