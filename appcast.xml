@@ -5,8 +5,8 @@
         <item>
             <title>2.0.1</title>
             <pubDate>Fri, 25 May 2024 12:10:57 +0200</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
+            <sparkle:version>2.0.1</sparkle:version>
+            <sparkle:shortVersionString>2.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/lo-cafe/lo-rain-public/releases/download/2.0.1/lo-rain.dmg" length="22594358" type="application/octet-stream"/>
         </item>
