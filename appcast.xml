@@ -8,7 +8,7 @@
             <sparkle:version>2.0.1</sparkle:version>
             <sparkle:shortVersionString>2.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/lo-cafe/lo-rain-public/releases/download/2.0.1/lo-rain.dmg" length="22594358" type="application/octet-stream"/>
+            <enclosure url="https://lo-cafe.github.io/lo-rain-public/lo-rain.dmg" length="22612806" type="application/octet-stream" sparkle:edSignature="qpPg2My/TsDY8ubB+apvKSR1RUj7djiSZaBjQcSQ4PAnD6EgGr+LO4F9j4iZsK5WJaRczx5rYb/pGUSFE7rICw=="/>
         </item>
     </channel>
 </rss>
