@@ -3,6 +3,14 @@
     <channel>
         <title>lo-rain</title>
         <item>
+            <title>2.0.5</title>
+            <pubDate>Thu, 30 May 2024 12:53:47 +0000</pubDate>
+            <sparkle:version>2.0.5</sparkle:version>
+            <sparkle:shortVersionString>2.0.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://lo-cafe.github.io/lo-rain-public/lo-rain.dmg" length="23183810" type="application/octet-stream" sparkle:edSignature="Blnlrb9jKMLuJjrLlA9uKk70DYs1ul1rEksVzSHH0bdbLna4y9g1m8S9Z6OUdxRhg5EwXhFI7zgYcSgh8FthDg=="/>
+        </item>
+        <item>
             <title>2.0.4</title>
             <pubDate>Tue, 28 May 2024 10:08:11 +0000</pubDate>
             <sparkle:version>2.0.4</sparkle:version>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>2.0.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://lo-cafe.github.io/lo-rain-public/lo-rain.dmg" length="22906832" type="application/octet-stream" sparkle:edSignature="zDG65QkixGR5TXoK9sOHpgkHIdNAjVnKWXHQvyXTPNdIM9wOtyVlp/etDiA+i9vULJXibTLH7xBd/JDE64qsDQ=="/>
-        </item>
-        <item>
-            <title>2.0.2</title>
-            <pubDate>Sat, 25 May 2024 11:08:39 +0000</pubDate>
-            <sparkle:version>2.0.2</sparkle:version>
-            <sparkle:shortVersionString>2.0.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://lo-cafe.github.io/lo-rain-public/lo-rain.dmg" length="22724217" type="application/octet-stream" sparkle:edSignature="CYOy51SfGK+RISwjlPXBgRjNiYsdDG9ew/WJm8OdH8ks7B7RcoLi6vdijEFUQN4Cjm3mDq3sgcUjt2hjfOI/Dg=="/>
         </item>
     </channel>
 </rss>
